@@ -30,12 +30,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 4
 
 <h2>Deployment and Configuration Steps</h2>
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In this lab, we will create two VMs in the same virtual network. One will be a Domain Controller, the other will be a Client machine. The first thing you will be doing is creating a resource group within the Azure Portal. By searching up resource group in the search bar in the Azure Portal and selecting create. Name the resource group 'Active-Directory-Lab', and for the region, select US East 2, and click create.
 </p>
 <br />
 
@@ -43,7 +38,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Afterwards, you have to create a virtual network by sure for it in the search bar with the Azure portal and selecting create. For the resource group, select Active-Directory-VNet through the drop-down arrow and name the virtual Network Active-Directory-Lab. Then set the region to (US) East US 2 and select Review + create 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now you'll have to create a VM by searching for it and clicking create. For the resource group
 </p>
 <br />
 
