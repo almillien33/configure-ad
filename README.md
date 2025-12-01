@@ -46,7 +46,7 @@ Afterwards, you have to create a virtual network by sure for it in the search ba
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Now you'll have to create a VM by searching for it and clicking create. For the resource group
+Now you'll have to create a VM by searching for it and clicking create. For the resource group select Active-Directory-Lab and the VM name set it as dc-1. Then set the region as the same region as your Virtual network, which is (US) East US 2. Now for the image 
 </p>
 <br />
 
