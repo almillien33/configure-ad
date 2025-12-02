@@ -46,7 +46,7 @@ Afterwards, you have to create a virtual network by sure for it in the search ba
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Now you'll have to create a VM by searching for it and clicking create. For the resource group select Active-Directory-Lab and the VM name set it as dc-1. Then set the region as the same region as your Virtual network, which is (US) East US 2. Now for the image 
+Now you'll have to create a VM by searching for it and clicking create. For the resource group, select Active-Directory-Lab and the VM name, set it as dc-1. Then set the region to the same region as your Virtual network, which is (US) East US 2. Now for the image select Windows Server 2022 Datacenter: Azure Edition -x64 Gen2 and for size select anything with at least 2cpus. Then, for the username, set it as labuser and the password as Cyberlab123!, and next, check off both boxes for the licensing agreement. When your done select next and click next for Disks. Now in the Networking tab for VN make sure it's Active-Directory-VNet and the subnet is set to default, and leave the reset and click create.
 </p>
 <br />
 
@@ -54,6 +54,35 @@ Now you'll have to create a VM by searching for it and clicking create. For the 
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now, create the Client VM by following the same steps as the previous step, making the image (Windows 10 Pro) and naming the VM “Client-1.” Then, set the username as labuser and the password as Cyberlab123!
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+After DC-1 is created, set the Domain Controller’s NIC Private IP address to be static. You'll do that by going to virtual machines and selecting dc-1, and on that page, click networking -> Network settings -> Network interface/ IP configuration -> ipconfig 1. Then, under Private IP address settings, select static and hit save.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, you'll have to log into the VM and disable the Windows Firewall (for testing connectivity). First, you will have to get dc-1 public IP address and connect to it with Microsoft Remote Desktop on either Windows or Mac, and put in the username and password we set earlier for dc-1 VM. Once you log in, right-click the Start menu and select Run and type wf.msc and press Enter. Then select Windows Defender Firewall Properties and go to Domain profile and private profile, and where it says Firewall state select off and click apply and ok to save.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+After that,  set Client-1’s DNS settings to DC-1’s Private IP address. You'll do that by copying dc-1 IP address and clicking on Client-1, and selecting networking -> network settings -> Network interface/ IP configuration -> DNS Servers. Then, under DNS server type in dc-1 private IP address and hit save.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
