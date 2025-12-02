@@ -86,3 +86,11 @@ After that,  set Client-1’s DNS settings to DC-1’s Private IP address. You'l
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+From the Azure Portal, restart Client-1 -> Login to Client-1 -> Attempt to ping DC-1’s private IP address and ensure the ping succeeded -> From Client-1, open PowerShell and run ipconfig /all, and the output for the DNS settings should show DC-1’s private IP Address.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
